@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS Grid</title>
+    <style>
+        .wrapper {
+            display: grid;
+            /* fr better than percentage etc. */
+            grid-template-columns: 1fr 1fr 1fr;
+            /* grid-tempalte-columns: repeat(3, 1fr) is same as above or repeat(4, 1fr 2fr) for varied sizes */
+            grid-gap: 1em;
+            /* grid-auto-rows: 100px; */
+            grid-auto-rows: minmax(100px, auto)
+        }
+
+.nested {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 70px;
+    grid-gap: 1em;
+}
+
+        .wrapper>div {
+            background: #eee;
+            padding: 1em;
+        }
+
+        /* makes every odd div element that colour */
+
+        .wrapper>div:nth-child(odd) {
+            background: #ddd;
+        }
+
+.nested > div {
+    border: #333 1px solid;
+}
+
+    </style>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div>
+            Lorem ipsum dolor sit.
+        </div>
+        <div>
+            Lorem ipsum dolor sit.
+        </div>
+        <div class="nested">
+            <div>Lorem</div>
+            <div>Lorem</div>
+            <div>Lorem</div>
+            <div>Lorem</div>
+            <div>Lorem</div>
+            <div>Lorem</div>
+            <div>Lorem</div>
+            <div>Lorem</div>
+            <div>Lorem</div>
+        </div>
+        <div>
+            Lorem ipsum dolor sit.
+        </div>
+        <div>
+            Lorem ipsum dolor sit.
+        </div>
+    </div>
+
+</body>
+
+</html>

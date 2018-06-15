@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<title>CSS Grids</title>
+
+<style>
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+    /* grid-gap: 1em  does same as above if both as same */
+}
+
+.wrapper > div {
+    background: #eee;
+    padding: 1em;
+}
+
+/* makes every odd div element that colour */
+.wrapper > div:nth-child(odd) {
+    background: #ddd;
+}
+
+</style>
+
+<body>
+
+    <div class="wrapper">
+        <div>
+            <!-- Lorem80*tab* -->
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt perspiciatis laudantium facilis vitae ducimus sed vero unde incidunt debitis. Ex quae dolor magni velit doloribus recusandae fugiat eius itaque laudantium deleniti consectetur ullam, sunt molestias quod fugit sequi? Ea sed quaerat beatae molestias. Ratione eum perferendis totam odio blanditiis obcaecati qui excepturi tenetur, culpa nam omnis dolorum provident, corporis laborum quos. Error doloribus facilis dolor, officiis voluptatibus aliquam accusantium laboriosam praesentium est veritatis a dolores ipsum illo ipsa repellendus aut.
+        </div>
+        <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium magnam aperiam vero soluta at ducimus eos, cupiditate nostrum illum explicabo! Modi quo, corrupti nihil repudiandae reprehenderit neque. Maxime, maiores est.
+        </div>
+    </div>
+
+</body>
+
+
+</html>
